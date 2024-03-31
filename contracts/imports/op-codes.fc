@@ -22,8 +22,3 @@ int op::ownership_proof_bounced() asm "0xc18e86d2 PUSHINT";
 int op::destroy() asm "0x1f04537a PUSHINT";
 int op::revoke() asm "0x6f89f5e3 PUSHINT";
 int op::take_excess() asm "0xd136d3b3 PUSHINT";
-
-;; SBT custom
-const op::get_tg_nick        = "op::get_tg_nick"c;
-const op::get_description    = "op::get_description"c;
-const op::set_description    = "op::set_description"c;
