@@ -1,4 +1,4 @@
-# TON SBT
+# TON SBT with offchain metadata
 
 Based on [Getgems NFT contracts](https://github.com/getgems-io/nft-contracts/)
 
