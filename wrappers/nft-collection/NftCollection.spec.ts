@@ -6,7 +6,7 @@ import { Blockchain, BlockchainSnapshot, SandboxContract, TreasuryContract } fro
 import '@ton/test-utils';
 import { compile } from '@ton/blueprint';
 import { findTransactionRequired, flattenTransaction } from "@ton/test-utils";
-import { encodeOffChainContent } from "../nft-content/nftContent";
+import { decodeOffChainContent, encodeOffChainContent } from "../nft-content/nftContent";
 
 describe('nft collection smc', () => {
     let code: Cell;
@@ -91,14 +91,14 @@ describe('nft collection smc', () => {
         let res = await nftCollection.getCollectionData()
 
         expect(res.nextItemId).toEqual(config.nextItemIndex)
-        expect(res.collectionContent.beginParse().loadStringTail()).toEqual(config.collectionContent)
+        expect(decodeOffChainContent(res.collectionContent)).toEqual(config.collectionContent)
         expect(res.ownerAddress.toString()).toEqual(config.ownerAddress.toString())
     })
 
     it('should return nft content', async () => {
         let nftContent = beginCell().storeStringTail("123").endCell();
         let res = await nftCollection.getNftContent(0, nftContent)
-        expect(res).toEqual(config.commonContent + '123')
+        expect(decodeOffChainContent(res)).toEqual(config.commonContent + '123')
     })
 
     it('should return nft address by index', async () => {
