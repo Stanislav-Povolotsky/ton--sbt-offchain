@@ -1,5 +1,5 @@
 # TON SBT with offchain metadata
-[![test workflow result](actions/workflows/test.yml/badge.svg)](actions/workflows/test.yml)
+[![test workflow result](../../actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml)
 
 Based on [Getgems NFT contracts](https://github.com/getgems-io/nft-contracts/)
 
