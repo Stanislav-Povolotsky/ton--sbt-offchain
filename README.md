@@ -1,7 +1,8 @@
 # TON SBT with offchain metadata
 [![test workflow result](../../actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml)
 
-Based on [Getgems NFT contracts](https://github.com/getgems-io/nft-contracts/)
+This is an off-chain implementation (all collection and token metadata is stored at a specific URL), you can find the on-chain implementation [here](https://github.com/Stanislav-Povolotsky/ton--sbt-onchain).  
+Based on [Getgems NFT contracts](https://github.com/getgems-io/nft-contracts/).
 
 ## Project structure
 
